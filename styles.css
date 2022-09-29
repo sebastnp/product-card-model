@@ -1,0 +1,120 @@
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Cream);
+    /* margin: 10px;
+    padding: 10px; */
+}
+
+.padre{
+    /* background-color: #D0B8A8; */
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: var(--White);
+    border-radius: 8px;
+    height: 440px;
+    width: 560px;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden; /*se aplica al contenedor*/
+}
+
+    .card__image{
+        /* background-color: #DFD3C3; */
+        /* flex-grow: 1; */
+        flex-basis: 50%; /*determina la anchura ya que esta puesto en row el direcction*/
+        width: 100%; /*para que no se desborde */
+    }
+
+        .card__image-pth{
+            /* overflow: hidden; */
+            height: 100%;
+            width: 100%;
+        }
+
+    .card__section{
+        /* background-color: #7D6E83; */
+        /* flex-grow:1; */
+        flex-basis: 50%;
+    } 
+
+        .sectionn{
+            margin-left: 1.8rem;
+            margin-right: 1.2rem;
+        }
+
+        .card__product{
+            color: var(--Dark-grayish-blue);
+            font-size: 0.8rem;
+            letter-spacing: 0.2rem;
+            font-weight: lighter;
+            margin-top: 1.8rem;
+        }
+
+        .card__title{
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            line-height: 1em;
+        }
+
+        .card__text{
+            font-size: 14px;
+            color: var(--Dark-grayish-blue);
+            line-height: 1.5em;
+        }
+
+        .card__product-price{
+            font-family: 'Fraunces', serif; 
+            font-weight: 700;
+            font-size: 2rem;
+            color: var(--Dark-cyan);
+            display: flex;
+        }
+
+            .card__product-discount{
+                font-family: 'Montserrat', sans-serif;
+                font-size: 0.8rem;
+                font-weight: lighter;
+                color: var(--Dark-grayish-blue);
+                text-decoration: line-through;
+                margin-top: 0.5rem;
+                margin-left: 0.3rem;
+            }
+
+        .card__button{
+            background-color: var(--Dark-cyan);
+            color: var(--White);
+            width: 225px;
+            border-radius: 5px;
+            border: none;
+            padding: 0.9rem 0 0.9rem 0;
+            letter-spacing: 0.05rem;
+        }
+
+            
+
+/* MEDIA QUERIS */
+
+@media all and (max-width: 700px){
+    .card{
+        flex-flow: column;
+        height: auto;
+    }
+}
+
